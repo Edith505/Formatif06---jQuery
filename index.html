@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire jQuery</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -9,32 +10,83 @@
 </head>
 <body>
 <div class="container">
-    <h1>Formulaire jQuery</h1>
+    <h1 class="title">Formulaire jQuery</h1>
     <form>
         <div class="form-group">
-            <label for="fullname">Nom Complèt</label>
-            <input type="text" class="form-control" id="fullname">
+            <label for="fullname">Nom Complet :</label>
+            <input type="text" class="form-control" id="fullname" aria-describedby="fullnameHelp">
+            <small id="fullnameHelp" class="form-text">Ce champ doit contenir au moins 2 caractères</small>
         </div>
 
         <div class="form-group">
-            <label for="email">Email address</label>
+            <label for="email">Email :</label>
             <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <small id="emailHelp" class="form-text">Vérifiez votre email</small>
         </div>
 
         <div class="form-group">
-            <label for="exampleFormControlSelect1">Example select</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-            </select>
+            <label>Votre Niveau :</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radio1" value="option1" checked>
+                <label class="form-check-label" for="radio1">Faible</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radio2" value="option2">
+                <label class="form-check-label" for="radio2">Moyen</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="radio3" value="option3">
+                <label class="form-check-label" for="radio3">Élevé</label>
+            </div>
+            <small id="levelHelp" class="form-text">Sélectionnez votre niveau</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="form-group">
+            <label>Langages de programmation :</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="langage1" value="option1">
+                <label class="form-check-label" for="langage1">Java</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="langage2" value="option2">
+                <label class="form-check-label" for="langage2">Javascript</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="langage3" value="option3">
+                <label class="form-check-label" for="langage3">PHP</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="langage4" value="option4">
+                <label class="form-check-label" for="langage4">Python</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="langage5" value="option5">
+                <label class="form-check-label" for="langage5">CSS</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="langage">Votre couleur préférée :</label>
+            <select class="form-control" id="langage">
+                <option>White</option>
+                <option>Green</option>
+                <option>Blue</option>
+                <option>Gray</option>
+                <option>Yellow</option>
+            </select>
+            <small id="langageHelp" class="form-text">Sélectionnez parmi les couleurs</small>
+        </div>
+
+        <div class="form-group">
+            <label for="remarque">Remarques :</label>
+            <textarea class="form-control" id="remarque" rows="3" placeholder="Écrivez ici votre remarque"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-danger">Effacer</button>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
     </form>
 </div>
-<script src="js/script.js"></script>
 </body>
 </html>
