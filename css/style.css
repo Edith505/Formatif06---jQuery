@@ -9,9 +9,10 @@
 body {
     font-family: "Poppins", sans-serif;
     background: linear-gradient(135deg, royalblue 0%, cornflowerblue 100%);
-    max-height: 100vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
+    justify-content: center;
     padding: 20px;
 }
 
@@ -34,7 +35,7 @@ body {
 form {
     display: flex;
     flex-direction: column;
-    gap: 1.25em;
+    gap: 1.5em;
 }
 
 .form-group label {
@@ -50,10 +51,6 @@ form {
     transition: all 0.3s ease;
 }
 
-.form-check-input:focus {
-    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
-}
-
 .form-text {
     color: #999;
     font-size: 0.85rem;
@@ -66,7 +63,6 @@ form {
     transition: all 0.3s ease;
     border: none;
 }
-
 
 .btn-primary:hover {
     transform: translateY(-2px);
@@ -93,7 +89,8 @@ form {
     cursor: pointer;
 }
 
-textarea.form-control {
-    resize: vertical;
-    min-height: 100px;
+.form-group small{
+    color: red;
+    font-style: italic;
+;
 }
